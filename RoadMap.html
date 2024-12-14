@@ -3,121 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partners - LCSP ($Class37)</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Roadmap - LCSP ($Class37)</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Section */
         header {
-            background: #007bff;
-            color: #fff;
-            padding: 10px 0;
+            background-image: url('Image/RoadMap.png'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: #e70505;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            font-size: 4em;
+            font-weight: bold;
         }
+
+        /* Navigation Bar */
+        nav {
+            background: #007bff;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        /* Main Content */
         .container {
             width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
+            margin: 40px auto;
             background: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 8px;
         }
-        h1 {
-            color: #f7f0f0;
+
+        h2 {
             text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #007bff;
         }
-        .partners {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
+
+        p {
+            text-align: center;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #555;
         }
-        .partners img {
-            max-width: 275px; /* Adjust the size as needed */
-            height: auto;
+
+        /* Roadmap Styling */
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+            gap: 20px;
         }
+
+        .roadmap-item {
+            background: #f1f1f1;
+            padding: 20px;
+            border-radius: 20px;
+            border-left: 5px solid #007bff;
+            transition: transform 0.3s;
+        }
+
+        .roadmap-item:hover {
+            transform: translateY(-5px);
+            background: #e9ecef;
+        }
+
+        .roadmap-item strong {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 10px 0;
+            padding: 20px;
             background: #007bff;
             color: #fff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: 40px;
+            font-size: 1em;
         }
+        .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.roadmap {
+    margin: 20px 0;
+}
+
+.roadmap-item {
+    background: #e9ecef;
+    border-left: 5px solid #007bff;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.roadmap-item strong {
+    margin-bottom: 5px; /* Space between the title and description */
+}
     </style>
-    
 </head>
 <body>
 
+<!-- Header Section -->
 <header>
-    <h1>Partners - LCSP ($Class37)</h1>
+    Roadmap - LCSP ($Class37)
 </header>
 
+<!-- Navigation Bar -->
+<nav>
+    <a href="Index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="RoadMap.html">RoadMap</a>
+    <a href="Partners.html">Partners</a>
+    <a href="Team.html">Team</a>
+    <a href="Web View.html">Live View</a>
+</nav>
+
+<!-- Main Content -->
 <div class="container">
-    <h2>Thanks to Microsoft Paint, This Project Mission Is Backed By:</h2>
-   
-    <div class="partners" style="display: flex; justify-content: space-between;">
-    <div style="flex: 1; text-align: left;">
-        <img src="Image/Cha-ChingINC.PNG" alt="Cha-Ching INC">
-    </div>
-    <div style="flex: 1; text-align: center;">
-        <img src="Image/CyberBird.png" alt="Cyber Bird">
-    </div>
-    <div style="flex: 1; text-align: right;">
-        <img src="Image/SecureLock.PNG" alt="Secure Lock">
-    </div>
-</div>
+    <div class="container">
+        <h2>Our Vision for the Future</h2>
+        <p>At LCSP ($Class37), we are committed to a clear and strategic roadmap that outlines our goals and milestones. Our vision is to create a sustainable and impactful cryptocurrency that benefits our community and supports charitable initiatives.</p>
     
+        <div class="roadmap">
+            <h2>2025 Roadmap</h2>
+            
+            <div class="roadmap-item">
+                <strong>Q1 2025:</strong> Launch Social Media Channels
+                <p>Build our presence on platforms like Twitter, Instagram, and Discord to connect with our growing community.</p>
+            </div>
+    
+            <div class="roadmap-item">
+                <strong>Q2 2025:</strong> Token Listing on Exchanges
+                <p>Work towards listing LCSP ($Class37) on popular crypto exchanges to increase liquidity and accessibility.</p>
+            </div>
+    
+            <div class="roadmap-item">
+                <strong>Q3 2025:</strong> Partnership with Influencers
+                <p>Collaborate with key crypto influencers and content creators to promote LCSP ($Class37) and expand our reach.</p>
+            </div>
+    
+            <div class="roadmap-item">
+                <strong>Q4 2025:</strong> Launch NFT Collection
+                <p>Introduce a unique LCSP ($Class37) NFT series to reward loyal holders and drive community engagement.</p>
+            </div>
+        </div>
+    
+        <div class="roadmap">
+            <h2>2026 Roadmap</h2>
+            
+            <div class="roadmap-item">
+                <strong>Q1 2026:</strong> Marketing Campaign Launch
+                <p>Initiate a comprehensive marketing strategy to increase awareness and engagement within the crypto community.</p>
+            </div>
+    
+            <div class="roadmap-item">
+                <strong>Q2 2026:</strong> Increase Coin Value
+                <p>Implement strategies to enhance the value of LCSP ($Class37) through partnerships and community engagement.</p>
+            </div>
+    
+            <div class="roadmap-item">
+                <strong>Q3 2026:</strong> Establish Presence in the Crypto Space
+                <p>Work towards becoming a recognized name in the cryptocurrency market through collaborations and events.</p>
+            </div>
+    
+            <div class="roadmap-item">
+                <strong>Q4 2026:</strong> Launch Community Development Program
+                <p>Introduce a program aimed at fostering community involvement, including educational workshops and development grants for innovative projects.</p>
+            </div>
+        </div>
     </div>
-</div>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clickable Box</title>
-    <style>
-        .button-container {
-            display: flex; /* Use flexbox */
-            justify-content: center; /* Center the buttons horizontally */
-            gap: 10px; /* Optional: space between buttons */
-            margin-top: 20px; /* Optional: space above the buttons */
-        }
 
-        .clickable-box {
-            display: inline-block;
-            width: 80px; /* Set the width of the box */
-            height: 80px; /* Set the height of the box */
-            background-color: #4CAF50; /* Background color */
-            color: white; /* Text color */
-            text-align: center; /* Center the text */
-            line-height: 75px; /* Center the text vertically */
-            text-decoration: none; /* Remove underline from link */
-            border-radius: 100px; /* Rounded corners */
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
-        }
-
-        .clickable-box:hover {
-            background-color: #45a049; /* Darker shade on hover */
-        }
-    </style>
-</head>
-<body>
-    <div class="button-container">
-        <a href="Index.html" class="clickable-box">Home</a>
-<a href="About.html" class="clickable-box">About</a>
-<a href="RoadMap.html" class="clickable-box">RoadMap</a>
-<a href="Partners.html" class="clickable-box"> Partners</a>
-<a href="Team.html" class="clickable-box">Team</a>
-<a href="Web View.html" class="clickable-box"> Live View</a>
-    </div>
-    <br>
+<!-- Footer -->
 <footer>
-    <p>&copy; July 4th 1776 LCSP ($Class37). All rights reserved.</p>
+    &copy; July 4th 1776 LCSP ($Class37). All rights reserved.
 </footer>
-</br>
+
 </body>
 </html>
