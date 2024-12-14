@@ -66,26 +66,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clickable Box</title>
     <style>
-        .button-container {
-            display: flex; /* Use flexbox */
+          .button-container {
+            display: flex; /* Use flexbox for horizontal alignment */
             justify-content: center; /* Center the buttons horizontally */
-            gap: 10px; /* Optional: space between buttons */
-            margin-top: 20px; /* Optional: space above the buttons */
+            margin-top: 10px; /* Space above the button container */
         }
 
         .clickable-box {
             display: inline-block;
             width: 80px; /* Set the width of the box */
-            height: 80px; /* Set the height of the box */
+            height: 40px; /* Set the height of the box */
             background-color: #4CAF50; /* Background color */
             color: white; /* Text color */
             text-align: center; /* Center the text */
-            line-height: 75px; /* Center the text vertically */
+            line-height: 40px; /* Center the text vertically */
             text-decoration: none; /* Remove underline from link */
-            border-radius: 100px; /* Rounded corners */
+            border-radius: 20px; /* Rounded corners */
             transition: background-color 0.3s; /* Smooth transition for hover effect */
+            margin: 5px; /* Space between buttons */
         }
-
+    
         .clickable-box:hover {
             background-color: #45a049; /* Darker shade on hover */
         }
@@ -93,11 +93,12 @@
 </head>
 <body>
     <div class="button-container">
-        <a href="About.html" class="clickable-box">About</a>
-        <a href="RoadMap.html" class="clickable-box">RoadMap</a>
-        <a href="Partners.html" class="clickable-box"> Partners</a>
-        <a href="Team.html" class="clickable-box">Team</a>
-        <a href="Web View.html" class="clickable-box"> Live View</a>
+        <a href="Index.html" class="clickable-box">Home</a> <!-- Clickable button -->
+        <a href="About.html" class="clickable-box">About</a><!-- Clickable button -->
+        <a href="RoadMap.html"class="clickable-box">RoadMap</a><!-- Clickable button -->
+        <a href="Partners.html" class="clickable-box"> Partners</a><!--Clickable Button-->
+        <a href="Team.html" class="clickable-box">Team</a><!--Clickable Button-->
+        <a href="Web View.html"class="clickable-box">Live View</a><!--Clickable Button-->
     </div>  
     <br>
 <footer>

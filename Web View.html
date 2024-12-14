@@ -7,11 +7,18 @@
     <style>
         body {
             display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
             height: 100vh; /* Full viewport height */
             margin: 0; /* Remove default margin */
             background-color: #f0f0f0; /* Light background color */
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Space between header and iframe */
+            font-size: 2em; /* Header font size */
+            color: #333; /* Header text color */
         }
 
         iframe {
@@ -20,39 +27,60 @@
             border: none; /* Remove border */
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+            margin-bottom: 20px; /* Space between iframe and buttons */
         }
-    </style>
-</head>
-<body>
- 
 
-    <iframe src="https://www.birdeye.so/token/89KmpcQiXPshEwZZVLMb6a9hdEBuHWcPQvxEQwTEfMs9?chain=solana&tab=trades" title="Solscan Token"></iframe>
+        .button-container {
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: center; /* Center the buttons horizontally */
+            margin-top: 10px; /* Space above the button container */
+        }
 
-    <br>
-    <title>Clickable Box</title>
-    <style>
         .clickable-box {
             display: inline-block;
             width: 80px; /* Set the width of the box */
-            height: 80px; /* Set the height of the box */
+            height: 40px; /* Set the height of the box */
             background-color: #4CAF50; /* Background color */
             color: white; /* Text color */
             text-align: center; /* Center the text */
-            line-height: 75px; /* Center the text vertically */
+            line-height: 40px; /* Center the text vertically */
             text-decoration: none; /* Remove underline from link */
-            border-radius: 100px; /* Rounded corners */
+            border-radius: 20px; /* Rounded corners */
             transition: background-color 0.3s; /* Smooth transition for hover effect */
+            margin: 5px; /* Space between buttons */
         }
     
         .clickable-box:hover {
             background-color: #45a049; /* Darker shade on hover */
         }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #007bff;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
-    </head>
-    <body>
-    
-        </div>
-    
-</br>
+</head>
+<body>
+    <h1>Live View</h1> <!-- Header for the page -->
+
+    <iframe src="https://www.birdeye.so/token/89KmpcQiXPshEwZZVLMb6a9hdEBuHWcPQvxEQwTEfMs9?chain=solana&tab=trades" title="Solscan Token"></iframe>
+
+    <div class="button-container">
+        <a href="Index.html" class="clickable-box">Home</a> <!-- Clickable button -->
+        <a href="About.html" class="clickable-box">About</a><!-- Clickable button -->
+        <a href="RoadMap.html"class="clickable-box">RoadMap</a><!-- Clickable button -->
+        <a href="Partners.html" class="clickable-box"> Partners</a><!--Clickable Button-->
+        <a href="Team.html" class="clickable-box">Team</a><!--Clickable Button-->
+        <a href="Web View.html"class="clickable-box">Web View</a><!--Clickable Button-->
+
+    </div>
+    <footer>
+        <p>&copy; July 4th 1776 LCSP ($Class37). All rights reserved.</p>
+    </footer>
 </body>
 </html>
