@@ -4,21 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partners - LCSP ($Class37)</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
+
         header {
-            background: #007bff;
-            color: #fff;
-            padding: 10px 0;
+            background-color: rgba(11, 7, 248, 0.9);
+            padding: 20px;
             text-align: center;
+            font-size: 2em;
+            color: #fff;
         }
+
+        nav {
+            background-color: #4CAF50;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #45a049;
+        }
+
         .container {
             width: 80%;
             margin: auto;
@@ -26,98 +48,90 @@
             padding: 20px;
             background: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
+
         h1 {
-            color: #f7f0f0;
+            color: #333;
             text-align: center;
         }
+
         .partners {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: 20px;
         }
+
         .partners img {
             max-width: 275px; /* Adjust the size as needed */
             height: auto;
         }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #007bff;
-            color: #fff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-    
-</head>
-<body>
 
-<header>
-    <h1>Partners - LCSP ($Class37)</h1>
-</header>
-
-<div class="container">
-    <h2>Thanks to Microsoft Paint, This Project Mission Is Backed By:</h2>
-   
-    <div class="partners" style="display: flex; justify-content: space-between;">
-    <div style="flex: 1; text-align: left;">
-        <img src="Image/Cha-ChingINC.PNG" alt="Cha-Ching INC">
-    </div>
-    <div style="flex: 1; text-align: center;">
-        <img src="Image/CyberBird.png" alt="Cyber Bird">
-    </div>
-    <div style="flex: 1; text-align: right;">
-        <img src="Image/SecureLock.PNG" alt="Secure Lock">
-    </div>
-</div>
-    
-    </div>
-</div>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clickable Box</title>
-    <style>
         .button-container {
-            display: flex; /* Use flexbox */
-            justify-content: center; /* Center the buttons horizontally */
-            gap: 10px; /* Optional: space between buttons */
-            margin-top: 20px; /* Optional: space above the buttons */
+            margin-top: 20px;
         }
 
         .clickable-box {
             display: inline-block;
-            width: 80px; /* Set the width of the box */
-            height: 80px; /* Set the height of the box */
-            background-color: #4CAF50; /* Background color */
-            color: white; /* Text color */
-            text-align: center; /* Center the text */
-            line-height: 75px; /* Center the text vertically */
-            text-decoration: none; /* Remove underline from link */
-            border-radius: 100px; /* Rounded corners */
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            width: 80px;
+            height: 80px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+            text-decoration: none;
+            border-radius: 50%;
+            transition: background-color 0.3s;
         }
 
         .clickable-box:hover {
-            background-color: #45a049; /* Darker shade on hover */
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="button-container">
-        <a href="Index.html" class="clickable-box">Home</a>
-<a href="About.html" class="clickable-box">About</a>
-<a href="RoadMap.html" class="clickable-box">RoadMap</a>
-<a href="Partners.html" class="clickable-box"> Partners</a>
-<a href="Team.html" class="clickable-box">Team</a>
-<a href="Web View.html" class="clickable-box"> Live View</a>
-    </div>
-    <br>
-<footer>
-    <p>&copy; July 4th 1776 LCSP ($Class37). All rights reserved.</p>
-</footer>
-</br>
+    <header>
+        <strong>Partners - LCSP ($Class37)</strong>
+    </header>
+
+    <nav>
+        <a href="Index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="RoadMap.html">RoadMap</a>
+        <a href="Partners.html">Partners</a>
+        <a href="Team.html">Team</a>
+        <a href="WebView.html">Live View</a>
+    </nav>
+
+    <div class="container">
+        <h2>Thanks to Microsoft Paint, This Project Mission Is Backed By:</h2>
+
+        <div class="partners">
+            <div style="flex: 1; text-align: left;">
+                <img src="Image/Cha-ChingINC.PNG" alt="Cha-Ching INC">
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <img src="Image/CyberBird.png" alt="Cyber Bird">
+            </div>
+            <div style="flex: 1; text-align: right;">
+                <img src="Image/SecureLock.PNG" alt="Secure Lock">
+            </div>
+        </div>
+
+        
+   
+
+    <footer>
+        <p>&copy; July 4th, 1776 LCSP ($Class37). All rights reserved.</p>
+    </footer>
 </body>
 </html>

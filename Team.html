@@ -6,6 +6,8 @@
     <title>Team - LCSP ($Class37)</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
+        
+        
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -46,21 +48,75 @@
             width: 100%;
         }
     </style>
+    
 </head>
 <body>
 
 <header>
+    <header>
+        <img src="Image/Team.jpg" alt="Placeholder Image" style="width: 50%; height: 300px; border-radius: 100px;">
+        
+    </header>
+    
     <h1>Meet Our Team - LCSP ($Class37)</h1>
 </header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slideshow</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+    .slideshow-container {
+        position: relative;
+        max-width: 300px;
+        margin: auto;
+        border: 2px solid #ccc;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .slide {
+        display: none;
+        font-size: 24px;
+        padding: 20px;
+    }
+    .active {
+        display: block;
+    }
+</style>
+</head>
+<body>
+    <br>
 
-<div class="container">
-    <p class="mission">Project Mission By: </p>
-    <center>
-    <p>Joseph Hagos (Team Lead)</p>
-    <p>Ching Wah Cen (Project Idea)</p>
-    <p>Blake Lin (Web Dev)</p>
-    <p>Justin Zeng (Web Dev)</p>
-    </center>
+<div class="slideshow-container">
+<div class="slide active">Joseph Hagos (Team Lead)</div>
+<div class="slide">Ching Wah Cen (Project Idea)</div>
+<div class="slide">Blake Lin (Web Dev)</div>
+<div class="slide">Justin Zeng (Web Dev)</div>
+</div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 2500); // Change slide every 3 seconds
+</script>
+</br>
+
 </div>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,8 +153,8 @@
         <a href="About.html" class="clickable-box">About</a><!-- Clickable button -->
         <a href="RoadMap.html"class="clickable-box">RoadMap</a><!-- Clickable button -->
         <a href="Partners.html" class="clickable-box"> Partners</a><!--Clickable Button-->
-        <a href="Team.html" class="clickable-box">Team</a><!--Clickable Button-->
-        <a href="Web View.html"class="clickable-box">Live View</a><!--Clickable Button-->
+        <a href="Web View.html" class="clickable-box">Live View</a><!--Clickable Button-->
+        <a href="Team.html"class="clickable-box">Team</a><!--Clickable Button-->
     </div>  
     <br>
 <footer>
