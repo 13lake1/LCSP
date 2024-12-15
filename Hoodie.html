@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    
+    <style>
+        header {
+            background-color: rgba(11, 7, 248, 0.9);
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            color: #fff;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+        .image-section {
+            flex: 1;
+        }
+        .image-section img {
+            cursor: pointer;
+            width: 150px; /* Adjust size as needed for thumbnails */
+            margin: 10px;
+        }
+        .main-image {
+            width: 100%; /* Make the main image responsive */
+            max-width: 700px; /* Set a maximum width for the main image */
+            margin-bottom: 20px;
+        }
+        .arrow {
+            cursor: pointer;
+            font-size: 24px;
+            margin: 0 10px;
+            user-select: none; /* Prevent text selection */
+        }
+        .details-section {
+            flex: 1;
+        }
+        .title {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .description {
+            margin-bottom: 50px;
+            color: #777;
+        }
+        .sizes {
+            margin-bottom: 100px;
+        }
+        .sizes label {
+            margin-right: 10px;
+        }
+        .add-to-cart {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 200px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .add-to-cart:hover {
+            background-color: #555;
+        }
+         /* Footer */
+         footer {
+            text-align: center;
+            padding: 20px;
+            background: #007bff;
+            color: #fff;
+            margin-top: 40px;
+            font-size: 1em;
+        }
+        .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.button-container {
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: center; /* Center the buttons horizontally */
+            margin-top: 10px; /* Space above the button container */
+        }
+
+        .clickable-box {
+            display: inline-block;
+            width: 80px; /* Set the width of the box */
+            height: 40px; /* Set the height of the box */
+            background-color: #0615f1; /* Background color */
+            color: white; /* Text color */
+            text-align: center; /* Center the text */
+            line-height: 40px; /* Center the text vertically */
+            text-decoration: none; /* Remove underline from link */
+            border-radius: 20px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            margin: 5px; /* Space between buttons */
+        }
+    
+        .clickable-box:hover {
+            background-color: #45a049; /* Darker shade on hover */
+        }
+    </style>
+    <script>
+        const images = [
+            'Image/BlueHoodie.png',
+            'Image/GrayHoodie.png',
+            'Image/RedHoodie.png',
+            'Image/WhiteHoodie.png'
+        ];
+        let currentIndex = 0;
+
+        function changeImage(imageSrc) {
+            document.getElementById('mainImage').src = imageSrc;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+            changeImage(images[currentIndex]);
+        }
+
+        function previousImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to the last image
+            changeImage(images[currentIndex]);
+        }
+
+        function addToCart() {
+            const priceElement = document.getElementById('price');
+            alert('Added to cart: ' + priceElement.textContent.trim());
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <strong>Project: LCSP 🚀</strong>
+    </header>
+    <br>
+    <a href="Merch.html" class="clickable-box"> Back </a><!-- Clickable button -->
+</br>
+    <br>
+    <div class="container">
+        <div class="image-section">
+            <img id="mainImage" class="main-image" src="Image/BlackHoodie.png" alt="Main Product Image">
+            <div>
+                <span class="arrow" onclick="previousImage()">&#10094; Previous</span>
+                <span class="arrow" onclick="nextImage()">Next &#10095;</span>
+            </div>
+            <div>
+                <img src="Image/BlackHoodie.png" alt="Blue Shirt" onclick="changeImage('Image/BlueShirt.png'); currentIndex = 0;">
+                <img src="Image/GrayHoodie.png" alt="Gray Shirt" onclick="changeImage('Image/GrayShirt.png'); currentIndex = 1;">
+                <img src="Image/RedHoodie.png" alt="Red Shirt" onclick="changeImage('Image/RedShirt.png'); currentIndex = 2;">
+                <img src="Image/WhiteHoodie.png" alt="White Shirt" onclick="changeImage('Image/WhiteShirt.png'); currentIndex = 3;">
+            </div>
+        </div>
+        <div class="details-section">
+            <div class="title"> Logo Tee</div>
+            <div class="price" id="price">$45</div>
+            <div class="description">
+                Our Basic Logo Tee with our LCSP Mascot, Jade.
+            </div>
+            <div class="sizes">
+                <label><input type="radio" name="size" value="XS"> XS</label>
+                <label><input type="radio" name="size" value="S"> S</label>
+                <label><input type="radio" name="size" value="M"> M</label>
+                <label><input type="radio" name="size" value="L"> L</label>
+                <label><input type="radio" name="size" value="XL"> XL</label>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; July 4th 1776 LCSP ($Class37). All rights reserved.
+    </footer>
+</body>
+</html>
