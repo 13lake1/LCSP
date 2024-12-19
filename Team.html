@@ -4,172 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team - LCSP ($Class37)</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
+        
+        
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Black background for fireworks */
-            color: #fff; /* White text */
-            overflow: hidden; /* To avoid scrollbar with animation */
+            background-color: #f4f4f4;
         }
         header {
-            background: #1a1a1a; /* Dark gray */
+            background: #007bff;
             color: #fff;
             padding: 10px 0;
             text-align: center;
-            border-bottom: 2px solid #fff;
         }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            color: #ffcc00; /* Gold color */
+            color: #333;
             text-align: center;
-            font-family: 'Pacifico', cursive; /* Festive font */
+        }
+        .mission {
+            font-size: 1.2em;
+            text-align: center;
+            margin: 20px 0;
         }
         footer {
             text-align: center;
             padding: 10px 0;
-            background: #1a1a1a;
+            background: #007bff;
             color: #fff;
             position: relative;
             bottom: 0;
             width: 100%;
-            border-top: 2px solid #fff;
         }
-        .slideshow-container {
-            border: 3px solid #fff;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
+    </style>
+    
+</head>
+<body>
+
+<header>
+    <header>
+        <img src="Image/Team.jpg" alt="Placeholder Image" style="width: 50%; height: 300px; border-radius: 100px;">
+        
+    </header>
+    
+    <h1>Meet Our Team - LCSP ($Class37)</h1>
+</header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slideshow</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+    .slideshow-container {
+        position: relative;
+        max-width: 300px;
+        margin: auto;
+        border: 2px solid #ccc;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .slide {
+        display: none;
+        font-size: 24px;
+        padding: 20px;
+    }
+    .active {
+        display: block;
+    }
+</style>
+</head>
+<body>
+    <br>
+
+<div class="slideshow-container">
+<div class="slide active">Joseph Hagos (Team Lead)</div>
+<div class="slide">Ching Wah Cen (Project Idea)</div>
+<div class="slide">Blake Lin (Web Dev)</div>
+<div class="slide">Justin Zeng (Web Dev)</div>
+</div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 2500); // Change slide every 3 seconds
+</script>
+</br>
+
+</div>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Box</title>
+    <style>
+          .button-container {
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: center; /* Center the buttons horizontally */
+            margin-top: 10px; /* Space above the button container */
         }
+
         .clickable-box {
-            background-color: #333; /* Dark gray */
-            color: #fff; /* White text */
+            display: inline-block;
+            width: 80px; /* Set the width of the box */
+            height: 40px; /* Set the height of the box */
+            background-color: #4CAF50; /* Background color */
+            color: white; /* Text color */
+            text-align: center; /* Center the text */
+            line-height: 40px; /* Center the text vertically */
+            text-decoration: none; /* Remove underline from link */
+            border-radius: 20px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            margin: 5px; /* Space between buttons */
         }
+    
         .clickable-box:hover {
-            background-color: #555; /* Lighter gray */
-        }
-
-        /* Firework animation styles */
-        .firework {
-            position: fixed;
-            width: 4px;
-            height: 20px;
-            background-color: white;
-            animation: launch 1s ease-out, explode 1s ease-out 1s;
-            transform-origin: bottom center;
-        }
-        .particle {
-            position: fixed;
-            width: 4px;
-            height: 4px;
-            background-color: white;
-            border-radius: 50%;
-            animation: particle-move 1s ease-out forwards;
-        }
-
-        @keyframes launch {
-            0% {
-                transform: translateY(100vh);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(50vh);
-                opacity: 1;
-            }
-        }
-
-        @keyframes explode {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-
-        @keyframes particle-move {
-            0% {
-                opacity: 1;
-                transform: translate(0, 0) scale(1);
-            }
-            100% {
-                opacity: 0;
-                transform: translate(var(--dx), var(--dy)) scale(0.5);
-            }
+            background-color: #45a049; /* Darker shade on hover */
         }
     </style>
 </head>
 <body>
-<header>
-    <img src="Image/Fireworks.jpg" alt="Fireworks" style="width: 50%; height: 300px; border-radius: 100px;">
-    <h1>Welcome to the New Year - LCSP ($Class37)</h1>
-</header>
-<div class="container">
-    <div class="slideshow-container">
-        <div class="slide active">Joseph Hagos (Team Lead)</div>
-        <div class="slide">Ching Wah Cen (Project Idea)</div>
-        <div class="slide">Blake Lin (Web Dev)</div>
-        <div class="slide">Justin Zeng (Web Dev)</div>
-    </div>
-</div>
-<div class="button-container">
-    <a href="Index.html" class="clickable-box">Home</a>
-    <a href="About.html" class="clickable-box">About</a>
-    <a href="RoadMap.html" class="clickable-box">RoadMap</a>
-    <a href="Web View.html" class="clickable-box">Live View</a>
-    <a href="Partners.html" class="clickable-box">Partners</a>
-    <a href="Team.html" class="clickable-box">Team</a>
-    <a href="Merch.html" class="clickable-box">Merch</a>
-</div>
-
+    <div class="button-container">
+        <a href="Index.html" class="clickable-box">Home</a> <!-- Clickable button -->
+        <a href="About.html" class="clickable-box">About</a><!-- Clickable button -->
+        <a href="RoadMap.html"class="clickable-box">RoadMap</a><!-- Clickable button -->
+        <a href="Web View.html" class="clickable-box"> Live View</a><!--Clickable Button-->
+        <a href="Partners.html" class="clickable-box">Partners</a><!--Clickable Button-->
+        <a href="Team.html"class="clickable-box">Team</a><!--Clickable Button-->
+        <a href="Merch.html"class="clickable-box">Merch</a><!--Clickable Button-->
+    </div>  
+    <br>
 <footer>
-    <p>&copy; January 1, 2025 - LCSP ($Class37). All rights reserved.</p>
+    <p>&copy; July 4th 1776 LCSP ($Class37). All rights reserved.</p>
 </footer>
-
-<!-- Fireworks effect script -->
-<script>
-    function createFirework() {
-        const firework = document.createElement('div');
-        firework.classList.add('firework');
-        firework.style.left = Math.random() * 100 + 'vw';
-        document.body.appendChild(firework);
-
-        setTimeout(() => {
-            explodeFirework(firework.offsetLeft, firework.offsetTop);
-            firework.remove();
-        }, 1000);
-    }
-
-    function explodeFirework(x, y) {
-        for (let i = 0; i < 20; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            particle.style.left = x + 'px';
-            particle.style.top = y + 'px';
-            const angle = Math.random() * 2 * Math.PI;
-            const distance = Math.random() * 200;
-            particle.style.setProperty('--dx', Math.cos(angle) * distance + 'px');
-            particle.style.setProperty('--dy', Math.sin(angle) * distance + 'px');
-            particle.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-            document.body.appendChild(particle);
-
-            setTimeout(() => {
-                particle.remove();
-            }, 1000);
-        }
-    }
-
-    setInterval(createFirework, 1000);
-</script>
+</br>
 </body>
 </html>
