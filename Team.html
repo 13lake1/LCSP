@@ -4,128 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team - LCSP ($Class37)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: 'Roboto', Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #1a1a1a, #000);
-            color: #fff;
+            background: linear-gradient(to bottom, #007bff, #f4f4f4);
+            color: #333;
         }
+
         header {
-            background: #222;
+            background: #007bff;
             color: #fff;
             padding: 20px 0;
             text-align: center;
-            border-bottom: 2px solid #444;
         }
+
         header img {
             width: 50%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
+
         h1 {
-            color: #ffcc00;
-            text-align: center;
             font-size: 2.5em;
+            margin: 10px 0;
         }
+
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 1000px;
             margin: 20px auto;
+            background: #fff;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .slideshow-container {
             position: relative;
-            max-width: 400px;
-            margin: auto;
-            border: 2px solid #fff;
+            max-width: 500px;
+            margin: 30px auto;
+            background: #fff;
             border-radius: 10px;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .slide {
             display: none;
-            font-size: 1.2em;
+            font-size: 1.5em;
+            padding: 20px;
             text-align: center;
-            color: #ffcc00;
         }
-        .slide.active {
+
+        .active {
             display: block;
         }
+
         .button-container {
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
             margin: 20px 0;
         }
+
         .clickable-box {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #444;
-            color: #fff;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1em;
             text-decoration: none;
-            border-radius: 5px;
-            margin: 5px;
-            transition: background-color 0.3s ease;
+            text-align: center;
+            border-radius: 20px;
+            transition: background-color 0.3s, transform 0.3s;
         }
+
         .clickable-box:hover {
-            background-color: #555;
+            background-color: #45a049;
+            transform: scale(1.1);
         }
+
         footer {
             text-align: center;
-            padding: 20px 0;
-            background: #222;
-            border-top: 2px solid #444;
+            padding: 15px 0;
+            background: #007bff;
+            color: #fff;
+            margin-top: 20px;
         }
+
         footer p {
             margin: 0;
         }
     </style>
 </head>
 <body>
-<header>
-    <img src="Image/Fireworks.jpg" alt="Fireworks">
-    <h1>Welcome to the New Year - LCSP ($Class37)</h1>
-</header>
-<div class="container">
-    <div class="slideshow-container">
-        <div class="slide active">Joseph Hagos (Team Lead)</div>
-        <div class="slide">Ching Wah Cen (Project Idea)</div>
-        <div class="slide">Blake Lin (Web Dev)</div>
-        <div class="slide">Justin Zeng (Web Dev)</div>
+    <header>
+        <img src="Image/Team.jpg" alt="Team Image">
+        <h1>Meet Our Team - LCSP ($Class37)</h1>
+    </header>
+
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="slide active">Joseph Hagos (Team Lead)</div>
+            <div class="slide">Ching Wah Cen (Project Idea)</div>
+            <div class="slide">Blake Lin (Web Dev)</div>
+            <div class="slide">Justin Zeng (Web Dev)</div>
+        </div>
+
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            setInterval(nextSlide, 3000);
+        </script>
+
+        <div class="button-container">
+            <a href="Index.html" class="clickable-box">Home</a>
+            <a href="About.html" class="clickable-box">About</a>
+            <a href="RoadMap.html" class="clickable-box">RoadMap</a>
+            <a href="WebView.html" class="clickable-box">Live View</a>
+            <a href="Partners.html" class="clickable-box">Partners</a>
+            <a href="Team.html" class="clickable-box">Team</a>
+            <a href="Merch.html" class="clickable-box">Merch</a>
+        </div>
     </div>
-</div>
-<div class="button-container">
-    <a href="Index.html" class="clickable-box">Home</a>
-    <a href="About.html" class="clickable-box">About</a>
-    <a href="RoadMap.html" class="clickable-box">RoadMap</a>
-    <a href="Web View.html" class="clickable-box">Live View</a>
-    <a href="Partners.html" class="clickable-box">Partners</a>
-    <a href="Team.html" class="clickable-box">Team</a>
-    <a href="Merch.html" class="clickable-box">Merch</a>
-</div>
-<footer>
-    <p>&copy; January 1, 2025 - LCSP ($Class37). All rights reserved.</p>
-</footer>
-<script>
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-        });
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    setInterval(nextSlide, 3000); // Change slide every 3 seconds
-</script>
+    <footer>
+        <p>&copy; July 4th 1776 LCSP ($Class37). All rights reserved.</p>
+    </footer>
 </body>
 </html>
